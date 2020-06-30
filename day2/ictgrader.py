@@ -15,7 +15,7 @@ def grader(name, homemark, assesmark, exammark):
     else:
         ictband = "F"
 
-    icttext = " name  " + name + " been awarded a " + ictband + " with a score of " + str(ictscore)
+    icttext = "Student  " + name + " been awarded a " + ictband + " with a score of " + str(ictscore)
 
 
 
