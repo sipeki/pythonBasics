@@ -1,18 +1,22 @@
 
 i = 1
 
-while i < 21:
+for i in range(20):
+
+    answer = i
     rFizz = i % 3
     rBuzz = i % 5
 
     if rFizz == 0:
-        print("Fizz")
+        answer = "Fizz"
 
     if rBuzz == 0:
-        print("Buzz")
+        if str(answer) != "Fizz":
+            answer = ""
+        answer = str(answer) + "Buzz"
 
 
-    print(i)
-    i = i + 1
+    print(answer)
+
 
 
