@@ -1,6 +1,11 @@
 def grader(name, homemark, assesmark, exammark):
 
-    ictscore = int(homemark + assesmark + exammark / 175)
+    hww = 0.25
+
+    asw = 0.35
+    few = 0.40
+
+    ictscore = round((int(homemark + assesmark + exammark)  / 175) * 100)
 
     if ictscore > 80:
         ictband = "A"
@@ -15,11 +20,41 @@ def grader(name, homemark, assesmark, exammark):
     else:
         ictband = "F"
 
-    icttext = "Student  " + name + " been awarded a " + ictband + " with a score of " + str(ictscore)
+    icttext = "Student  " + name + " has been awarded a " + ictband + " with a score of " + str(ictscore)
 
 
 
     return icttext
+
+def graderweighted(name, homemark, assesmark, exammark):
+
+    hww = int(homemark) + 0.25
+
+    asw = int(assesmark) * 0.35
+
+    few = int(assesmark) * 0.40
+
+    ictscore = round(hww + asw + few)
+
+    if ictscore > 80:
+        ictband = "A"
+    elif ictscore <= 80 and ictscore >= 71:
+        ictband = "B"
+    elif ictscore <= 70 and ictscore >= 61:
+        ictband = "C"
+    elif ictscore <= 60 and ictscore >= 51:
+        ictband = "D"
+    elif ictscore <= 50 and ictscore >= 41:
+        ictband = "E"
+    else:
+        ictband = "F"
+
+    icttext = "Student  " + name + " has been awarded a " + ictband + " with a weighted score of " + str(ictscore)
+
+
+
+    return icttext
+
 
 
 name = input("Students name ? ")
@@ -55,3 +90,5 @@ while True:
 
 
 print(grader(name,homework,assessment,exam))
+
+print(graderweighted(name,homework,assessment,exam))
