@@ -1,11 +1,7 @@
 def grader(name, homemark, assesmark, exammark):
 
-    hww = 0.25
 
-    asw = 0.35
-    few = 0.40
-
-    ictscore = round((int(homemark + assesmark + exammark)  / 175) * 100)
+    ictscore = round((int(homemark + assesmark + exammark)/175) * 100)
 
     if ictscore > 80:
         ictband = "A"
@@ -28,11 +24,11 @@ def grader(name, homemark, assesmark, exammark):
 
 def graderweighted(name, homemark, assesmark, exammark):
 
-    hww = int(homemark) + 0.25
+    hww = ((int(homemark) / 25) * 100) * 0.25
 
-    asw = int(assesmark) * 0.35
+    asw = ((int(assesmark) / 50) * 100) * 0.35
 
-    few = int(assesmark) * 0.40
+    few = int(exammark) * 0.40
 
     ictscore = round(hww + asw + few)
 
