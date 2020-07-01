@@ -1,8 +1,9 @@
 class Student:
 
-    def __int__(self, name, age):
+    def __init__(self, name, age):
         self.name = name
         self.age = age
+
 
 John = Student("John", "21")
 Jane = Student("Jane", "22")
