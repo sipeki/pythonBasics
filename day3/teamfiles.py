@@ -6,12 +6,12 @@ file.write(teams)
 file .close()
 
 file = open("teams.txt", "r")
-file.seek(0)
+
 textline = ""
 
-for line in range(0,5):
+for line in range(0,4):
     textline = file.readline()
-    if line == 1 or line == 4:
-        print(line, file.readline())
+    if line == 0 or line == 3:
+        print(line+1, textline)
 
 file .close()

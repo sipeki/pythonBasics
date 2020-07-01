@@ -18,6 +18,7 @@ class Bird:
 
     extinct = False
 
+
 class Owl(Bird):
 
     def reproduce(self):
@@ -26,7 +27,8 @@ class Owl(Bird):
     def eat(self):
         print("Peck Peck")
 
-class Dodo(Bird)
+
+class Dodo(Bird):
     Fly = False
     extinct = True
 
